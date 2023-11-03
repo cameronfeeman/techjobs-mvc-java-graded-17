@@ -12,16 +12,25 @@
 
   <!-- TODO #1 - Use a loop to display job results in a table. -->
 
+<!--  //iterate over jobs-->
+
   <div th:each="job : ${jobs}">
+
+<!--    //Add CSS class to table-->
     <table class="techjobs job-listing">
+
+<!--      // Looping through the columns and getting the Table header value-->
       <tr>
         <th:block th:each="column : ${columns}">
           <th th:text="${column.value}"> </th></th:block>
+
+<!--        //fill in the correct values-->
       </tr>
       <tr>
         <th> ID </th>
         <td th:text="${job.id}"></td>
         </tr>
+      <tr>
         <th>Name</th>
         <td th:text="${job.name}"></td>
       </tr>
