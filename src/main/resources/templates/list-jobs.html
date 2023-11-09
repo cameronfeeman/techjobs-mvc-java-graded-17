@@ -11,6 +11,7 @@
   <h1 th:text="${#strings.capitalizeWords(title)}"></h1>
 
   <!-- TODO #1 - Use a loop to display job results in a table. -->
+    //define fragment of table to display the job info, add CSS style, iterate over and set current item to job
     <table th:fragment="job-tables" class=" techjobs job-listing" th:each="job : ${jobs}">
 
 
@@ -28,6 +29,9 @@
 
 <!--&lt;!&ndash;        //fill in the correct values&ndash;&gt;-->
 <!--      </tr>-->
+
+
+<!--      display the job details within the table-->
       <tr>
         <th> ID </th>
         <td th:text="${job.id}"></td>
